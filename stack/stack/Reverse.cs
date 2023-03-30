@@ -1,27 +1,32 @@
-﻿using System.Collections;
-using System.Text;
+﻿using System.Text;
 
 namespace stack
 {
     public class Reverse
     {
+        public static StreamReader sr = new(Console.OpenStandardInput());
+        public static StreamWriter sw = new(Console.OpenStandardOutput());
         static void Main(string[] args)
         {
-            StringBuilder sb = new();
-            int num = int.Parse(Console.ReadLine());
-
+            Stack<char> stack = new();
+            int num = int.Parse(sr.ReadLine());
             for (int i = 0; i < num; ++i)
             {
-                string? input = Console.ReadLine();
-                ReverseString(input ?? "", sb);
+                string[] input = sr.ReadLine().Split(' ');
+
+                foreach(var word in input)
+                {
+                    ReverseString(word ?? "", stack);
+                    sw.Write(' ');
+                }
+                sw.Write('\n');
             }
-
-            Console.WriteLine(sb.ToString());
-
+            sr.Close();
+            sw.Close();
         }
-        static private string ReverseString(string s, StringBuilder sb)
+        static private void ReverseString(string s, Stack<char> stack)
         {
-            Stack<char> stack = new();
+            stack.Clear();
             foreach (char c in s)
             {
                 stack.Push(c);
@@ -29,10 +34,8 @@ namespace stack
 
             foreach (char c in stack)
             {
-                sb.Append(c);
+                sw.Write(c);
             }
-            sb.Append('\n');
-            return (sb.ToString());
         }
 
     }
