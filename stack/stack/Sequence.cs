@@ -23,11 +23,10 @@ namespace algoritm
                 int input = int.Parse(sr.ReadLine() ?? "-1");
                 Process(input);
             }
-            
             sw.Close();
         }
 
-        private static void Process(int input) //index : 5, input 3, lastnum : 4
+        private static void Process(int input)
         {
             for (; index <= input; ++index)
             {
@@ -38,6 +37,24 @@ namespace algoritm
                     stack.Pop();
                     sw.WriteLine("-");
                     ++index;
+                    return;
+                }
+            }
+
+            while(true)
+            {
+                if(stack.Count == 0)
+                {
+                    //sw.BaseStream.Seek(0, SeekOrigin.Begin);
+                    //sw.BaseStream.SetLength(0);
+                    sw.WriteLine("NO");
+                    return;
+                }
+
+                if(stack.Peek() == input)
+                {
+                    stack.Pop();
+                    sw.WriteLine("-");
                     return;
                 }
             }
