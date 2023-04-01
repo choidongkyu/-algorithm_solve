@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,11 @@ namespace algoritm
 {
     public class Sequence
     {
+        public static MemoryStream memoryStream = new();
         public static StreamReader sr = new(Console.OpenStandardInput());
-        public static StreamWriter sw = new(Console.OpenStandardOutput());
+        public static StreamReader msr = new(memoryStream);
+        public static StreamWriter sw = new(memoryStream);
+        static bool success = true;
         static int index = 1;
         static Stack<int> stack = new();
         static void Main(string[] args)
@@ -23,7 +27,17 @@ namespace algoritm
                 int input = int.Parse(sr.ReadLine() ?? "-1");
                 Process(input);
             }
-            sw.Close();
+            sw.Flush();
+            if (success)
+            {
+                msr.BaseStream.Seek(0, SeekOrigin.Begin);
+                var test = msr.ReadToEnd();
+                Console.WriteLine(test);
+            }
+            else
+            {
+                Console.WriteLine("NO");
+            }
         }
 
         private static void Process(int input)
@@ -41,22 +55,15 @@ namespace algoritm
                 }
             }
 
-            while(true)
+            while (true)
             {
-                if(stack.Count == 0)
+                if (stack.Pop() == input)
                 {
-                    //sw.BaseStream.Seek(0, SeekOrigin.Begin);
-                    //sw.BaseStream.SetLength(0);
-                    sw.WriteLine("NO");
-                    return;
-                }
-
-                if(stack.Peek() == input)
-                {
-                    stack.Pop();
                     sw.WriteLine("-");
                     return;
                 }
+                success = false;
+                break;
             }
         }
     }
