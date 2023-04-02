@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ehdqk\\Desktop\\work\\algoritm_study\\stack\\stack\\stack.csproj",
-      "projectName": "stack",
-      "projectPath": "C:\\Users\\ehdqk\\Desktop\\work\\algoritm_study\\stack\\stack\\stack.csproj",
+      "projectUniqueName": "C:\\Users\\ehdqk\\Desktop\\work\\algoritm_study\\stack\\stack\\algoritm.csproj",
+      "projectName": "algoritm",
+      "projectPath": "C:\\Users\\ehdqk\\Desktop\\work\\algoritm_study\\stack\\stack\\algoritm.csproj",
       "packagesPath": "C:\\Users\\ehdqk\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ehdqk\\Desktop\\work\\algoritm_study\\stack\\stack\\obj\\",
       "projectStyle": "PackageReference",
