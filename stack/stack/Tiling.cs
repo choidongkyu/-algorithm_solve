@@ -7,27 +7,23 @@ using System.Threading.Tasks;
 
 namespace algoritm
 {
-    public class Pair<T, U>
-    {
-        public Pair()
-        {
-        }
-
-        public Pair(T first, U second)
-        {
-            this.First = first;
-            this.Second = second;
-        }
-
-        public T First { get; set; }
-        public U Second { get; set; }
-    };
     public class Tiling
     {
+        public static StreamReader sr = new(Console.OpenStandardInput());
+        public static StreamWriter sw = new(Console.OpenStandardOutput());
         static void Main(string[] args)
         {
-            Pair<int, int> firstTile = new Pair<int, int>(1, 2);
-            Pair<int, int> secondTile = new Pair<int, int>(2, 1);
+            int num = int.Parse(sr.ReadLine() ?? "0");
+            int[] memo = new int[num + 2];
+            memo[1] = 1;
+            memo[2] = 2;
+            for(int i = 3; i <= num; ++i)
+            {
+                memo[i] = (memo[i - 1] + memo[i - 2]) % 10007;
+            }
+
+            sw.WriteLine(memo[num]);
+            sw.Close();
         }
     }
 }

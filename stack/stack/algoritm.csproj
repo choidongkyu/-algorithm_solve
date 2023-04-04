@@ -10,6 +10,7 @@
   <ItemGroup>
     <Compile Remove="Editor.cs" />
     <Compile Remove="Program.cs" />
+    <Compile Remove="Queue.cs" />
     <Compile Remove="Reverse.cs" />
     <Compile Remove="Sequence.cs" />
     <Compile Remove="VPS.cs" />
@@ -19,6 +20,7 @@
     <None Include="..\.editorconfig" Link=".editorconfig" />
     <None Include="Editor.cs" />
     <None Include="Program.cs" />
+    <None Include="Queue.cs" />
     <None Include="Reverse.cs" />
     <None Include="Sequence.cs" />
     <None Include="VPS.cs" />
