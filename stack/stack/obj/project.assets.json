@@ -8,26 +8,27 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ehdqk\\.nuget\\packages\\": {}
+    "C:\\Users\\tobby\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ehdqk\\Desktop\\work\\algoritm_study\\stack\\stack\\algoritm.csproj",
+      "projectUniqueName": "D:\\dkchoi\\algoritm\\algorithm_solve\\stack\\stack\\algoritm.csproj",
       "projectName": "algoritm",
-      "projectPath": "C:\\Users\\ehdqk\\Desktop\\work\\algoritm_study\\stack\\stack\\algoritm.csproj",
-      "packagesPath": "C:\\Users\\ehdqk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ehdqk\\Desktop\\work\\algoritm_study\\stack\\stack\\obj\\",
+      "projectPath": "D:\\dkchoi\\algoritm\\algorithm_solve\\stack\\stack\\algoritm.csproj",
+      "packagesPath": "C:\\Users\\tobby\\.nuget\\packages\\",
+      "outputPath": "D:\\dkchoi\\algoritm\\algorithm_solve\\stack\\stack\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ehdqk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tobby\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

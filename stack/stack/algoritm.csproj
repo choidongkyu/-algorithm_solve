@@ -13,6 +13,7 @@
     <Compile Remove="Queue.cs" />
     <Compile Remove="Reverse.cs" />
     <Compile Remove="Sequence.cs" />
+    <Compile Remove="Tiling.cs" />
     <Compile Remove="VPS.cs" />
   </ItemGroup>
 
@@ -23,6 +24,7 @@
     <None Include="Queue.cs" />
     <None Include="Reverse.cs" />
     <None Include="Sequence.cs" />
+    <None Include="Tiling.cs" />
     <None Include="VPS.cs" />
   </ItemGroup>
 
