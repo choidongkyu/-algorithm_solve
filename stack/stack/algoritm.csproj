@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Baekjoon_1436.cs" />
     <Compile Remove="Chess.cs" />
     <Compile Remove="Editor.cs" />
     <Compile Remove="Program.cs" />
@@ -20,6 +21,7 @@
 
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="Baekjoon_1436.cs" />
     <None Include="Chess.cs" />
     <None Include="Editor.cs" />
     <None Include="Program.cs" />
